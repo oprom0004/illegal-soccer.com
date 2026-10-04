@@ -94,29 +94,26 @@
       <span class="current">Football Legends</span>
     </nav>
 
-    <!-- Hero Banner with Embedded Instant Game -->
-    <section class="hero-section" style="padding: 1.5rem 1rem 2rem 1rem; margin-bottom: 2rem;">
-      <div class="badge-tag">WEB INSTANT PLAY • ZERO DOWNLOAD</div>
-      <h1 class="hero-title" style="margin-bottom: 0.5rem;">PLAY FOOTBALL LEGENDS ONLINE</h1>
-      <p class="hero-sub" style="margin-bottom: 1.25rem;">
-        Click below to play instantly in your browser! Fireball super-shots, flying jump kicks, and 2-player local matches.
-      </p>
+    <!-- Compact Title Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+      <h1 style="font-size: clamp(1.2rem, 3vw, 1.55rem); font-weight: 900; color: #fff; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+        ⚽ Play Football Legends Online
+      </h1>
+      <span class="badge-tag" style="margin: 0; padding: 0.2rem 0.65rem; font-size: 0.72rem;">WEB PLAY • ZERO DOWNLOAD</span>
+    </div>
 
-      <!-- Embedded Playable Game Iframe (Top Priority / Above the Fold) -->
-      <div class="game-iframe-wrapper" style="max-width: 900px; margin: 0 auto 1rem auto; padding-bottom: 58%;">
-        <iframe src="https://footballlegends-online.github.io/" title="Football Legends Free Web Game" allow="fullscreen; autoplay" scrolling="no" loading="lazy"></iframe>
+    <!-- Embedded Playable Game Iframe (Directly at the Top) -->
+    <div class="game-iframe-wrapper" style="max-width: 1000px; margin: 0 auto 0.5rem auto; padding-bottom: 56.25%;">
+      <iframe src="https://footballlegends-online.github.io/file/" title="Football Legends Free Web Game" allow="fullscreen; autoplay" scrolling="no" loading="lazy"></iframe>
+    </div>
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text-dim);">
+      <span>🎮 Click inside to play • Supports 2-Player mode & Fullscreen</span>
+      <div class="game-meta-pills" style="margin: 0;">
+        <span class="meta-pill" style="padding: 0.15rem 0.5rem; font-size: 0.75rem;">⚡ <strong>Match:</strong> 95%</span>
+        <span class="meta-pill" style="padding: 0.15rem 0.5rem; font-size: 0.75rem;">💻 <strong>Platform:</strong> Browser</span>
       </div>
-      
-      <p style="font-size:0.85rem; color:var(--text-dim); text-align:center; margin-bottom: 1.25rem;">
-        *Click inside the arena to activate controls. Supports Fullscreen and 2-Player Versus / Co-op modes.
-      </p>
-      
-      <div class="game-meta-pills" style="justify-content: center;">
-        <span class="meta-pill">⚡ <strong>Match to Illegal Soccer:</strong> 95%</span>
-        <span class="meta-pill">💻 <strong>Platform:</strong> HTML5 Web Browser</span>
-        <span class="meta-pill">🎮 <strong>Modes:</strong> Tournament & 2P Versus</span>
-      </div>
-    </section>
+    </div>
 
     <!-- Comparison Breakdown -->
     <section class="content-block">
