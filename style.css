@@ -645,10 +645,53 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alt-card:hover {
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.12);
+}
+
+.alt-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0b1320;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.alt-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.alt-card:hover .alt-card-thumb img {
+  transform: scale(1.05);
+}
+
+.alt-thumb-overlay {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .alt-card-header {
