@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://illegal-soccer.com/sitemap.xml
