@@ -107,11 +107,27 @@
       <iframe src="https://footballlegends-online.github.io/file/" title="Football Legends Free Web Game" allow="fullscreen; autoplay" scrolling="no" loading="lazy"></iframe>
     </div>
     
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; font-size: 0.82rem; color: var(--text-dim);">
-      <span>🎮 Click inside to play • Supports 2-Player mode & Fullscreen</span>
-      <div class="game-meta-pills" style="margin: 0;">
-        <span class="meta-pill" style="padding: 0.15rem 0.5rem; font-size: 0.75rem;">⚡ <strong>Match:</strong> 95%</span>
-        <span class="meta-pill" style="padding: 0.15rem 0.5rem; font-size: 0.75rem;">💻 <strong>Platform:</strong> Browser</span>
+    <!-- Arcade Action Toolbar (Fullscreen, Restart, Theater, Share) -->
+    <div class="game-action-toolbar" style="max-width: 1000px; margin: 0 auto 2.5rem auto;">
+      <div class="left-tools">
+        <button id="fullscreenBtn" class="arcade-tool-btn primary-tool" type="button" title="Play Fullscreen">
+          <span>⛶</span> Fullscreen
+        </button>
+        <button id="restartBtn" class="arcade-tool-btn" type="button" title="Restart Game">
+          <span>🔄</span> Restart
+        </button>
+        <button id="theaterBtn" class="arcade-tool-btn" type="button" title="Expand Game View">
+          <span>🖥️</span> Theater View
+        </button>
+      </div>
+      <div class="right-tools">
+        <button id="shareBtn" class="arcade-tool-btn" type="button" title="Copy Link to Share">
+          <span>🔗</span> Share Game
+        </button>
+        <div class="game-meta-pills" style="margin: 0;">
+          <span class="meta-pill" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;">⚡ <strong>Match:</strong> 95%</span>
+          <span class="meta-pill" style="padding: 0.2rem 0.55rem; font-size: 0.75rem;">👥 <strong>2-Player:</strong> Co-op & Versus</span>
+        </div>
       </div>
     </div>
 

@@ -219,7 +219,59 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
   }
 
-  // 3. Instant Hover Preloading for Internal Navigation
+  // 3. Arcade Control Toolbar Actions (Fullscreen, Restart, Theater, Share)
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
+  const restartBtn = document.getElementById('restartBtn');
+  const theaterBtn = document.getElementById('theaterBtn');
+  const shareBtn = document.getElementById('shareBtn');
+  const gameIframe = document.querySelector('.game-iframe-wrapper iframe');
+  const gameWrapper = document.querySelector('.game-iframe-wrapper');
+
+  if (fullscreenBtn && gameIframe) {
+    fullscreenBtn.addEventListener('click', () => {
+      const target = gameWrapper || gameIframe;
+      if (target.requestFullscreen) {
+        target.requestFullscreen();
+      } else if (target.webkitRequestFullscreen) {
+        target.webkitRequestFullscreen();
+      } else if (target.msRequestFullscreen) {
+        target.msRequestFullscreen();
+      }
+    });
+  }
+
+  if (restartBtn && gameIframe) {
+    restartBtn.addEventListener('click', () => {
+      const currentSrc = gameIframe.src;
+      gameIframe.src = '';
+      setTimeout(() => {
+        gameIframe.src = currentSrc;
+      }, 100);
+    });
+  }
+
+  if (theaterBtn) {
+    theaterBtn.addEventListener('click', () => {
+      document.body.classList.toggle('theater-active');
+      theaterBtn.classList.toggle('primary-tool');
+    });
+  }
+
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const originalText = shareBtn.innerHTML;
+        shareBtn.innerHTML = '<span>✅</span> Copied!';
+        shareBtn.classList.add('primary-tool');
+        setTimeout(() => {
+          shareBtn.innerHTML = originalText;
+          shareBtn.classList.remove('primary-tool');
+        }, 2000);
+      });
+    });
+  }
+
+  // 4. Instant Hover Preloading for Internal Navigation
   const preloadedUrls = new Set();
   function preloadUrl(url) {
     if (!url || preloadedUrls.has(url)) return;
